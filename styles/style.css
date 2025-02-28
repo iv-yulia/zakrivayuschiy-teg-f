@@ -11,6 +11,48 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  padding-block: 100px;
+  color: var(--text-color);
+  font-size: var(--main-font-size, 18px);
+  line-height: var(--main-line-height);
+  background-color: var(--bg-color);
+  min-inline-size: 375px;
   min-block-size: 100dvb;
+}
+
+@supports (font-variation-settings: normal) {
+
+  .page {
+    font-family: var(--main-font-family);
+    font-weight: var(--text-weight);
+  }
+}
+
+.responsive-block-width {
+  inline-size: var(--block-inline-size);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-block: clamp(120px, 2.462vw + 6.923rem, 128px);
+  font-family: var(--accent-font-family);
+  font-weight: var(--text-weight);
+  line-height: 1;
+  text-transform: uppercase;
+  border: var(--border);
+}
+
+.header__logo {
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
+}
+
+.header__title {
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }

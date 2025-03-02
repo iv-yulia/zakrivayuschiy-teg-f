@@ -4,8 +4,94 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
 */
+
+@keyframes growth {
+
+  from {
+    scale: 1;
+  }
+
+  to {
+    scale: 1.25;
+  }
+}
+
+@keyframes sparking {
+
+  from {
+    fill: transparent;
+  }
+
+  to {
+    fill: var(--icon-filling);
+  }
+}
+
+.like-icon__sparks {
+  fill: var(--icon-filling);
+}
+
+.like-icon__core,
+.like-icon__main-body,
+.like-icon__sparks {
+  fill: transparent;
+}
+
+.like-icon__contour {
+  fill: var(--icon-contour);
+}
+
+.like-icon__core {
+  transition: var(--transition-effect) 0.03s;
+}
+
+.like-icon__main-body {
+  transition: var(--transition-effect);
+}
+
+.card__icon-button:hover .like-icon__core {
+  fill: var(--icon-contour);
+}
+
+.card__icon-button:hover .like-icon__main-body {
+  fill: var(--icon-contour);
+}
+
+.card__icon-button:active .like-icon__core {
+  fill: var(--icon-filling);
+}
+
+.card__icon-button:active .like-icon__main-body {
+  fill: var(--icon-filling);
+}
+
+.card__icon-button:hover .like-icon__main-body,
+.card__icon-button:active .like-icon__main-body {
+  transition: var(--transition-effect) 0.05s;
+}
+
+.card__icon-button:hover .like-icon__core,
+.card__icon-button:active .like-icon__core {
+  transition: var(--transition-effect);
+}
+
+.like-icon.is-liked .like-icon__contour,
+.like-icon.is-liked .like-icon__main-body,
+.like-icon.is-liked .like-icon__core {
+  fill: var(--icon-filling);
+}
+
+.like-icon.is-liked .like-icon__contour {
+  transition: var(--transition-effect) 0.06s;
+}
+
+.like-icon.is-liked {
+  animation: growth ease-in 0.3s 0.1s;
+}
+
+.like-icon.is-liked .like-icon__sparks {
+  animation: sparking ease-in 0.3s 0.3s;
+}

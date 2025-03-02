@@ -20,6 +20,8 @@
   font-size: var(--main-font-size, 18px);
   line-height: var(--main-line-height);
   background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  background-size: cover;
   min-inline-size: 375px;
   min-block-size: 100dvb;
 }
@@ -41,12 +43,13 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  border: var(--border);
   padding-block: clamp(120px, 2.462vw + 6.923rem, 128px);
   font-family: var(--accent-font-family);
   font-weight: var(--text-weight);
   line-height: 1;
   text-transform: uppercase;
-  border: var(--border);
+  background-color: var(--bg-color);
 }
 
 .header__logo {
@@ -55,4 +58,226 @@
 
 .header__title {
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  background-color: var(--bg-color);
+}
+
+.card__title {
+  padding-inline: 10px;
+  padding-block: 4px 6px;
+  font-size: var(--main-font-size, 18px);
+  line-height: 1.21;
+}
+
+.card__image-wrapper {
+  position: relative;
+  border-block: var(--border);
+}
+
+.card__watermark {
+  position: absolute;
+  opacity: 0.5;
+  font-family: var(--accent-font-family);
+  font-size: var(--accent-font-size);
+  text-shadow: -1px 0 var(--text-decoration), 0 1px var(--text-decoration), 1px 0 var(--text-decoration), 0 -1px var(--text-decoration);
+  inset-block-start: 20px;
+  inset-inline-end: 11px;
+  mix-blend-mode: hard-light;
+}
+
+@supports(-webkit-text-stroke: 1px #fff) {
+
+  .card__watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-decoration);
+  }
+} 
+
+.card__watermark_transform {
+  text-transform: uppercase;
+}
+
+.card__image {
+  display: block;
+  object-fit: cover;
+  inline-size: 100%;
+}
+
+.filter-grayscale {
+  filter: grayscale(0.7);
+}
+
+.filter-saturate {
+  filter: saturate(170%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(40deg);
+}
+
+.filter-invert {
+  filter: invert(0.8);
+}
+
+.filter-sepia {
+  filter: sepia(90%);
+}
+
+.filter-blue {
+  filter: blur(4px);
+}
+
+.filter-multiple {
+  filter: hue-rotate(90deg) sepia(30%) blur(2px);
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 26px;
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+  max-block-size: 37px;
+}
+
+.button {
+  position: relative;
+  border: var(--border);
+  color: var(--bg-color);
+  font-family: var(--accent-font-family);
+  font-size: var(--accent-font-size);
+  line-height: 0.9;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:not(.card__icon-button):focus-visible {
+  box-shadow: 2px 2px var(--accent-color);
+}
+
+.button:not(.card__icon-button)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button__text {
+  mix-blend-mode: difference;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  border: var(--border);
+}
+
+.card__like-button {
+  min-inline-size: 130px;
+}
+
+.save-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding-inline: 18px;
+  padding-block: 15px;
+  background-color: var(--bg-color);
+  max-block-size: 84px;
+  min-inline-size: 308px;
+  max-inline-size: 335px;
+}
+
+.save-button svg {
+  width: 29px;
+  height: 29px;
+  mix-blend-mode: difference;
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  padding-inline: 40px;
+  padding-block: 30px;
+  font-family: var(--accent-font-family);
+  font-size: var(--accent-font-size);
+  line-height: 1.5;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease-in-out;
+  inline-size: clamp(341px, 20.447rem + 3.692vw, 353px);
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0.75);
+}
+
+.dialog:not([open]) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page:has(.dialog[open]) {
+  overflow: hidden;
+}
+
+.dialog__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-block-end: 30px;
+}
+
+.dialog__content svg {
+  min-width: 39px;
+  height: 39px;
+}
+
+.close-button {
+  padding-block: 12px;
+  text-transform: inherit;
+  inline-size: 100%;
+}
+
+@media (width >=768px) {
+
+  .save-button {
+    flex-direction: row;
+  }
+
+  .save-button svg {
+    width: 21px;
+    height: 21px;
+  }
 }

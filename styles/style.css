@@ -91,19 +91,23 @@
   opacity: 0.5;
   font-family: var(--accent-font-family);
   font-size: var(--accent-font-size);
-  text-shadow: -1px 0 var(--text-decoration), 0 1px var(--text-decoration), 1px 0 var(--text-decoration), 0 -1px var(--text-decoration);
+  text-shadow:
+    -1px 0 var(--text-decoration),
+    0 1px var(--text-decoration),
+    1px 0 var(--text-decoration),
+    0 -1px var(--text-decoration);
   inset-block-start: 20px;
   inset-inline-end: 11px;
   mix-blend-mode: hard-light;
 }
 
-@supports(-webkit-text-stroke: 1px #fff) {
+@supports (-webkit-text-stroke: 1px #fff) {
 
   .card__watermark {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-decoration);
   }
-} 
+}
 
 .card__watermark_transform {
   text-transform: uppercase;
@@ -176,7 +180,7 @@
 }
 
 .button:not(.card__icon-button)::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background-color: var(--accent-color);

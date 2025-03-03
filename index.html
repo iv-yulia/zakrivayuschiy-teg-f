@@ -492,23 +492,23 @@
         <span class="visually-hidden">Открыть окно</span>
         <span class="button__text">Сохранить на память</span>
       </button>
+      <dialog id="dialog-id" class="dialog">
+        <div class="dialog__content">
+          <svg viewBox="0 0 40 40">
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <span>Вставьте дискету, чтобы продолжить</span>
+        </div>
+        <button
+          class="button close-button"
+          type="button"
+          onclick="window['dialog-id'].close()"
+        >
+          <span class="visually-hidden">Закрыть окно</span>
+          <span class="button__text">ok</span>
+        </button>
+      </dialog>
     </main>
-    <dialog id="dialog-id" class="dialog">
-      <div class="dialog__content">
-        <svg viewBox="0 0 40 40">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span>Вставьте дискету, чтобы продолжить</span>
-      </div>
-      <button
-        class="button close-button"
-        type="button"
-        onclick="window['dialog-id'].close()"
-      >
-        <span class="visually-hidden">Закрыть окно</span>
-        <span class="button__text">ok</span>
-      </button>
-    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

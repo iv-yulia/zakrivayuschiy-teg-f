@@ -19,6 +19,7 @@
   background-color: var(--bg-color);
   background-image: var(--bg-gradient);
   background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 375px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--text-weight);
@@ -137,7 +138,7 @@
   filter: sepia(90%);
 }
 
-.filter-blue {
+.filter-blur {
   filter: blur(4px);
 }
 
@@ -281,5 +282,10 @@
   .save-button svg {
     width: 21px;
     height: 21px;
+  }
+
+  .card__watermark {
+    inset-block-start: 23px;
+    inset-inline-end: 25px;
   }
 }

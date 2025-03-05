@@ -15,7 +15,7 @@
   </head>
   <body class="page">
     <header class="header responsive-block-width">
-      <span class="header__logo">&lt;/html&gt;</span>
+      <a href="#0" class="header__logo">&lt;/html&gt;</a>
       <h1 class="header__title">закрывающий тег</h1>
     </header>
     <main class="main">
@@ -24,15 +24,17 @@
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
         <div class="card__image-wrapper">
-          <span class="card__watermark card__watermark_transform"
+          <span
+            aria-hidden="true"
+            class="card__watermark card__watermark_transform"
             >&lt;/html&gt;</span
           >
           <img
+            loading="lazy"
             src="./images/car.png"
             alt="машина на фоне ночного неба"
             class="card__image"
           />
-          <h3 class="card__label"></h3>
         </div>
         <div class="card__description">
           <p class="card__paragraph">
@@ -44,7 +46,7 @@
             Место для ваших воспоминаний о начале обучения.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button button">
+            <button type="button" class="card__icon-button button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -72,7 +74,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -81,15 +83,17 @@
       <article class="card responsive-block-width">
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__image-wrapper">
-          <span class="card__watermark card__watermark_transform"
-            >&lt;/html&gt;</span
-          >
           <img
+            loading="lazy"
             src="./images/car.png"
             alt="машина на фоне ночного неба"
             class="card__image filter-grayscale"
           />
-          <h3 class="card__label"></h3>
+          <span
+            aria-hidden="true"
+            class="card__watermark card__watermark_transform"
+            >&lt;/html&gt;</span
+          >
         </div>
         <div class="card__description">
           <p class="card__paragraph">
@@ -103,7 +107,7 @@
             Место для ваших воспоминаний о начале первого спринта.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button button">
+            <button type="button" class="card__icon-button button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -131,7 +135,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -140,15 +144,17 @@
       <article class="card responsive-block-width">
         <h2 class="card__title">1 спринт: А если не получится?</h2>
         <div class="card__image-wrapper">
-          <span class="card__watermark card__watermark_transform"
-            >&lt;css&gt;</span
-          >
           <img
+            loading="lazy"
             src="./images/car.png"
             alt="машина на фоне ночного неба"
             class="card__image filter-saturate"
           />
-          <h3 class="card__label"></h3>
+          <span
+            aria-hidden="true"
+            class="card__watermark card__watermark_transform"
+            >&lt;css&gt;</span
+          >
         </div>
         <div class="card__description">
           <p class="card__paragraph">
@@ -160,7 +166,7 @@
             Место для ваших воспоминаний об окончании первого спринта.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button button">
+            <button type="button" class="card__icon-button button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -188,7 +194,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -197,13 +203,15 @@
       <article class="card responsive-block-width">
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <div class="card__image-wrapper">
-          <span class="card__watermark">&lt;desigions&gt;</span>
           <img
+            loading="lazy"
             src="./images/car.png"
             alt="машина на фоне ночного неба"
             class="card__image filter-hue-rotate"
           />
-          <h3 class="card__label"></h3>
+          <span aria-hidden="true" class="card__watermark"
+            >&lt;desigions&gt;</span
+          >
         </div>
         <div class="card__description">
           <p class="card__paragraph">
@@ -217,7 +225,7 @@
             Место для ваших воспоминаний о начале второго спринта.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button button">
+            <button type="button" class="card__icon-button button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -245,7 +253,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -254,13 +262,13 @@
       <article class="card responsive-block-width">
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <div class="card__image-wrapper">
-          <span class="card__watermark">&lt;care&gt;</span>
           <img
+            loading="lazy"
             src="./images/car.png"
             alt="машина на фоне ночного неба"
             class="card__image filter-invert"
           />
-          <h3 class="card__label"></h3>
+          <span aria-hidden="true" class="card__watermark">care</span>
         </div>
         <div class="card__description">
           <p class="card__paragraph">
@@ -275,7 +283,7 @@
             Место для ваших воспоминаний об окончании второго спринта.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button button">
+            <button type="button" class="card__icon-button button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -303,7 +311,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -312,13 +320,15 @@
       <article class="card responsive-block-width">
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <div class="card__image-wrapper">
-          <span class="card__watermark">&lt;support&gt;</span>
           <img
+            loading="lazy"
             src="./images/car.png"
             alt="машина на фоне ночного неба"
             class="card__image filter-sepia"
           />
-          <h3 class="card__label"></h3>
+          <span aria-hidden="true" class="card__watermark"
+            >&lt;support&gt;</span
+          >
         </div>
         <div class="card__description">
           <p class="card__paragraph">
@@ -330,7 +340,7 @@
             Место для ваших воспоминаний о начале третьего спринта.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button button">
+            <button type="button" class="card__icon-button button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -358,7 +368,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -367,13 +377,15 @@
       <article class="card responsive-block-width">
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <div class="card__image-wrapper">
-          <span class="card__watermark">&lt;lifes-style: none;&gt;</span>
           <img
+            loading="lazy"
             src="./images/car.png"
             alt="машина на фоне ночного неба"
-            class="card__image filter-blue"
+            class="card__image filter-blur"
           />
-          <h3 class="card__label"></h3>
+          <span aria-hidden="true" class="card__watermark"
+            >&lt;lifes-style: none;&gt;</span
+          >
         </div>
         <div class="card__description">
           <p class="card__paragraph">
@@ -387,7 +399,7 @@
             Место для ваших воспоминаний об окончании третьего спринта.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button button">
+            <button type="button" class="card__icon-button button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -415,7 +427,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -424,13 +436,15 @@
       <article class="card responsive-block-width">
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__image-wrapper">
-          <span class="card__watermark">&lt;experience&gt;</span>
           <img
+            loading="lazy"
             src="./images/car.png"
             alt="машина на фоне ночного неба"
             class="card__image filter-multiple"
           />
-          <h3 class="card__label"></h3>
+          <span aria-hidden="true" class="card__watermark"
+            >&lt;experience&gt;</span
+          >
         </div>
         <div class="card__description">
           <p class="card__paragraph">
@@ -446,7 +460,7 @@
             этой точке пути.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button button">
+            <button type="button" class="card__icon-button button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -474,7 +488,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -497,12 +511,10 @@
           <svg viewBox="0 0 40 40">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <span>Вставьте дискету, чтобы продолжить</span>
+          <p>Вставьте дискету, чтобы продолжить</p>
         </div>
         <form method="dialog">
-          <button
-            class="button close-button"
-          >
+          <button type="submit" class="button close-button">
             <span class="visually-hidden">Закрыть окно</span>
             <span class="button__text">ok</span>
           </button>
